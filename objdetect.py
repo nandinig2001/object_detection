@@ -66,7 +66,7 @@ while True:
         x, y, w, h = boxes[i]
         label = str(classes[class_ids[i]])
         confidence = str(round(confidences[i],2))
-        color = colors[(255,255,255)]
+        color = colors[i]
         cv2.rectangle(img, (x,y), (x+w, y+h), color, 2)
         cv2.putText(img, label + " " + confidence, (x,y+20), font, 2, (255,255,255), 2)
 
